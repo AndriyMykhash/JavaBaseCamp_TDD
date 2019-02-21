@@ -18,7 +18,16 @@ public class Caesar {
     }
 
 
-    public char encodeChar(char toEncode, int key) {
-        return '\n';
+    public String encodeChar(char toEncode, int key) {
+        if(key > 26){
+            return "\n";
+        }
+        for (int i = 0; i < letter.length; i++){
+            if (toEncode == letter[i]){
+                int code = ((i+key)%26 -1) < 0 ? 0: ((i+key)%26 -1);
+                return letter[code]+"";
+            }
+        }
+        return "\n";
     }
 }

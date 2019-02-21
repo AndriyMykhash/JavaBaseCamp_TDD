@@ -21,8 +21,8 @@ public class TestClass {
 
     @Test
     public void getCipherChar(){
-        Assert.assertEquals('i',unit.encodeChar('a',9));
-        Assert.assertEquals('a',unit.encodeChar('r',9));
+        Assert.assertEquals("i", unit.encodeChar('a',9));
+        Assert.assertEquals("a", unit.encodeChar('r',9));
 
     }
 
