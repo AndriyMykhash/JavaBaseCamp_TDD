@@ -17,6 +17,8 @@ public class TestClass {
     @Test
     public void caesarTest(){
         Assert.assertEquals("axvjrwn unccdln", unit.caesarCipher("romaine lettuce",9) );
+        Assert.assertEquals("axvjrwn unccdln jwm laxdcxwb manbbnm frcq unvxw sdrln xuren xru npp fxalnbcnabqran bjdln", unit.caesarCipher("romaine lettuce and croutons dressed with lemon juice olive oil egg worcestershire sauce",9) );
+
     }
 
     @Test

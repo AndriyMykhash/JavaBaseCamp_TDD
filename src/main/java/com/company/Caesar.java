@@ -11,7 +11,15 @@ public class Caesar {
     public String caesarCipher(String toEncodeMessage, int steps) {
         StringBuilder codedMessage = new StringBuilder();
 
-        return null;
+        for (int i = 0; i < toEncodeMessage.length(); i++){
+            if(toEncodeMessage.charAt(i) == ' '){
+                codedMessage.append(" ");
+                continue;
+            }
+            codedMessage.append(encodeChar(toEncodeMessage.charAt(i), steps));
+        }
+
+        return codedMessage.toString();
     }
 
 
