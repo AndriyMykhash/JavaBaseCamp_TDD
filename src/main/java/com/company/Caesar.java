@@ -11,20 +11,18 @@ public class Caesar {
     public String caesarCipher(String toEncodeMessage, int steps) {
         StringBuilder codedMessage = new StringBuilder();
 
-
-
-
         return null;
     }
 
 
     public String encodeChar(char toEncode, int key) {
+
         if(key > 26){
-            return "\n";
+            return "Error";
         }
         for (int i = 0; i < letter.length; i++){
             if (toEncode == letter[i]){
-                int code = ((i+key)%26 -1) < 0 ? 0: ((i+key)%26 -1);
+                int code = ((i+key)%26);
                 return letter[code]+"";
             }
         }

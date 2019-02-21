@@ -21,8 +21,12 @@ public class TestClass {
 
     @Test
     public void getCipherChar(){
-        Assert.assertEquals("i", unit.encodeChar('a',9));
+        Assert.assertEquals("j", unit.encodeChar('a',9));
         Assert.assertEquals("a", unit.encodeChar('r',9));
+
+        // Продивився ключ, вище 9, тому для a = j, а для 25 a = z а не і
+        Assert.assertEquals("z", unit.encodeChar('a',25));
+        Assert.assertEquals("q", unit.encodeChar('r',25));
 
     }
 
